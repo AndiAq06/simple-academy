@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f8f8f8;
+}
+
+header {
+  background: rgba(11, 33, 73);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex; /* Menjadikan kontainer flexbox */
+  justify-content: space-between; /* Menyusun elemen secara horizontal dan memisahkan ke dua ujung */
+  align-items: center; /* Mengatur item dalam header secara vertikal di tengah */
+}
+
+header .name-web {
+  margin-left: 30px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.navbar ul li a:hover {
+  background-color: rgba(0, 20, 50, 1);
+}
+
+/* Bagian Jumbotron */
+
+.jumbotron {
+  background-color: white;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container h1 {
+  /* margin-top: 50px; */
+  line-height: 70px;
+}
+
+.jumbotron h1 {
+  font-weight: bold;
+  color: rgba(11, 33, 73);
+}
+
+.jumbotron p {
+  color: #666;
+  padding-bottom: 25px;
+}
+
+/* Bagian Materi */
+.container-materi {
+  display: flex;
+  margin-top: 50px;
+}
+
+.container-materi .middle {
+  /* border: 1px solid #111; */
+  /* height: 100vh; */
+  padding: 20px;
+}
+
+.middle {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 20px;
+}
+.middle h1 {
+  color: #e5405f;
+  font-size: 32px; /* Sesuaikan dengan kebutuhan */
+  width: 100%; /* Lebar kelas */
+  display: flex;
+  justify-content: center;
+}
+
+.container-class {
+  display: flex;
+  flex-direction: column; /* Menyusun konten secara vertikal */
+  align-items: center; /* Memusatkan konten secara horizontal */
+}
+
+.container-class h2 {
+  border-bottom: 1px solid #ccc;
+  font-size: 24px; /* Sesuaikan dengan kebutuhan */
+  /* text-align: center; */
+}
+
+.class {
+  width: 80%; /* Lebar kelas */
+  margin-bottom: 20px; /* Jarak antar kelas */
+}
+
+.class h2 {
+  margin-bottom: 10px;
+  color: #e5405f;
+}
+
+.column {
+  width: 30%; /* Lebar kolom */
+  float: left;
+  padding-right: 10px; /* Jarak antar kolom */
+}
+
+.column ul li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.column ul li a {
+  margin-left: 5px;
+}
+
+.class ul {
+  list-style: none;
+}
+
+.class ul li {
+  margin-bottom: 5px;
+}
+
+.class ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.class ul li a:hover {
+  color: #0b2149; /* Warna hover */
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.material-symbols-outlined {
+  color: rgba(11, 33, 73);
+}
+
+.container-box ul li {
+  margin-left: 20px;
+}
+/* Footer */
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(11, 33, 73);
+}
+
+/* Bagian artikel */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-left: 20px; /* ruang di sisi kiri */
+  margin-right: 20px; /* ruang di sisi kanan */
+  overflow-y: auto; /* agar dapat di-scroll jika konten melebihi ketinggian maksimum */
+}
+
+.container-box {
+  /* flex-grow: 5; bagian tengah memperluas ke sisa ruang yang tersedia */
+  margin-right: 20px; /* ruang antara bagian tengah kiri dan kanan */
+  background-color: #fff; /* warna latar belakang */
+  padding: 40px; /* padding untuk ruang di sekitar konten */
+  border-radius: 10px; /* border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow */
+  width: 1000px;
+}
+
+.container-box h2 {
+  color: #333; /* warna teks judul */
+}
+
+.container-box ol {
+  padding-left: 20px;
+}
+
+.container-box ol li::marker {
+  color: #666; /* Ganti warna penanda menjadi biru */
+}
+.author-info {
+  display: flex;
+  flex-direction: column; /* Menyusun elemen secara vertikal */
+  align-items: center;
+  margin-top: 10px; /* Jarak antara judul dan informasi penulis */
+}
+
+.author-avatar {
+  width: 40px; /* Lebar gambar profil penulis */
+  height: 40px; /* Tinggi gambar profil penulis */
+  border-radius: 50%; /* Mengubah bentuk gambar menjadi lingkaran */
+  margin: 10px 0; /* Jarak antara gambar dan elemen lainnya */
+}
+
+.author-name {
+  font-weight: bold; /* Membuat nama penulis tebal */
+}
+
+.post-date {
+  color: #777; /* Warna abu-abu untuk tanggal */
+  margin-top: 5px; /* Jarak antara nama penulis dan tanggal */
+}
+
+.container-box p {
+  color: #666; /* warna teks paragraf */
+  margin-top: 7px;
+  text-align: justify;
+}
+
+.container-box h3 {
+  color: #333;
+  margin-top: 15px;
+}
+
+.related-articles,
+.other-articles {
+  /* width: 95%; bagian kanan dan kiri */
+  margin-right: 20px; /* ruang antara bagian kanan dan container-box */
+  max-height: 400px; /* set tinggi maksimum */
+  overflow-y: auto; /* agar dapat di-scroll jika konten melebihi ketinggian maksimum */
+  width: 300px;
+}
+
+.related-articles {
+  background-color: #fff; /* warna latar belakang */
+  padding: 20px; /* padding untuk ruang di sekitar konten */
+  border-radius: 10px; /* border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow */
+}
+
+.related-articles h3 {
+  color: #333; /* warna teks judul */
+}
+
+.related-articles ul,
+.other-articles ul {
+  padding: 0; /* hapus padding pada ul */
+}
+
+.related-articles a,
+.other-articles a {
+  text-decoration: none; /* hilangkan garis bawah default */
+  color: #555; /* ubah warna teks */
+}
+
+.related-articles a:hover,
+.other-articles a:hover {
+  text-decoration: underline; /* garis bawah saat hover */
+}
+
+.other-articles {
+  background-color: #fff; /* warna latar belakang */
+  padding: 20px; /* padding untuk ruang di sekitar konten */
+  border-radius: 10px; /* border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow */
+}
+
+.related-articles h3 {
+  color: #e5405f; /* warna teks judul */
+}
+
+.other-articles h3 {
+  color: #e5405f; /* warna teks judul */
+}
+
+.path a {
+  color: #383838;
+  font-size: 14px;
+}
+
+/* Bagian Question */
+.choices {
+  margin-bottom: 10px;
+}
+.choices span {
+  display: block;
+  margin-bottom: 2px;
+}
+.answer {
+  display: none;
+  margin-top: 20px;
+}
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #45a049;
+}
+
+label {
+  font-size: 12px;
+  color: #666;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+img {
+  text-align: center;
+  display: block;
+  width: 500px;
+  height: 300px;
+}
+
+/* bagian tabel */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  color: #444;
+}
+
+/* bagian tabel */
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+h4 {
+  margin-top: 15px;
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin-bottom: 4px;
+  border-radius: 5px;
+}
+
+/* Bagian Tag Kode */
+.code-block {
+  position: relative;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.code-block pre {
+  padding: 20px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.code-block code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  display: block;
+  text-align: left;
+}
+
+.code-block pre code {
+  padding-left: 0;
+}
+
+.copy-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+/* Tambahkan kode ini di bagian bawah file CSS Anda */
+
+@media screen and (max-width: 960px) {
+  .container-class {
+    width: 100%;
+  }
+
+  .class {
+    width: 100%;
+  }
+
+  .column {
+    width: 100%;
+    float: none;
+    padding-right: 0;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .container-box {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .related-articles,
+  .other-articles {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 28px;
+    right: 20px;
+  }
+
+  .navbar {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .name-web {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 90%;
+    height: 350px;
+  }
+
+  /* related artikel */
+  .related-articles {
+    display: none;
+  }
+}

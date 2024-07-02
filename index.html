@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Simple Academy</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="mobile-notification">Disarankan membuka web di laptop untuk sementara waktu.</div>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-4">Welcome to our Math and SQL Web Page!</h1>
+        <p class="lead">Explore the world of mathematics and SQL with us.</p>
+      </div>
+    </div>
+
+    <div class="container-card">
+      <div class="card">
+        <h2>Matematika</h2>
+        <p>Matematika adalah ilmu pengetahuan yang mempelajari konsep dasar seperti angka, ruang, struktur, dan perubahan.</p>
+      </div>
+      <div class="card">
+        <h2>SQL</h2>
+        <p>SQL (Structured Query Language) adalah bahasa pemrograman yang digunakan untuk mengakses, mengelola, dan mengubah data dalam basis data.</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      const yearElement = document.getElementById("year");
+      const currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+          var notification = document.getElementById("mobile-notification");
+          notification.style.display = "block";
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

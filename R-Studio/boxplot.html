@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membuat Boxplot Menggunakan R-Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="related-articles">
+        <h3>Artikel Terkait</h3>
+        <ul>
+          <li><a href="#">Memahami Konsep Dasar Statistika</a></li>
+          <li><a href="#">Penerapan Statistika dalam Berbagai Bidang</a></li>
+          <!-- Anda dapat menambahkan lebih banyak artikel terkait di sini -->
+        </ul>
+      </div>
+
+      <div class="container-box">
+        <div class="path">
+          <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
+          <a href="/statistika/parametrik_nonparametrik.html">R-Studio</a>
+        </div>
+        <h2 class="judul">Membuat Boxplot Menggunakan R-Studio</h2>
+        <div class="author-info">
+          <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
+          <span class="author-name">Andi Ardiansyah Nasir</span>
+          <span class="post-date">12 Juni 2024</span>
+        </div>
+
+        <div class="img">
+          <!-- <img src="/img/barplot6.png" alt="image" /> -->
+        </div>
+
+        <div class="introduction">
+          <h3>Pengertian Boxplot</h3>
+          <p>
+            Boxplot atau diagram kotak merupakan salah satu jenis visualisasi data yang digunakan untuk menganalisis distribusi data serta menampilkan statistik deskriptif seperti nilai tengah, kuartil, rentang data, dan keberadaan outliers
+            (data yang ekstrem). Diciptakan pertama kali oleh John Tukey pada tahun 1969, boxplot merupakan alat yang efektif untuk memahami sebaran data secara visual.
+          </p>
+          <h3>Fungsi Bar-Chart</h3>
+          <ol>
+            <li>
+              <p>Menunjukkan Sebaran Data: Boxplot membantu dalam menunjukkan bagaimana data tersebar secara grafis. Ini memberi gambaran visual tentang sebaran nilai-nilai data dari minimum hingga maksimum.</p>
+            </li>
+            <li><p>Identifikasi Posisi Nilai Tengah: Dengan menampilkan garis di dalam kotak, boxplot memvisualisasikan nilai median (nilai tengah) dari data, yang merupakan pemisah antara kuartil pertama dan kedua.</p></li>
+            <li>
+              <p>
+                Pengukuran Kuartil dan Rentang Interkuartil: Diagram kotak memperlihatkan kuartil pertama (Q1) dan ketiga (Q3), yang membentuk kotak. Rentang interkuartil (IQR) dapat dihitung dari Q3 - Q1, menyoroti sebaran data di tengah.
+              </p>
+            </li>
+            <li><p>Mendeteksi Outliers: Tanda-tanda titik di luar batas atas dan bawah (whiskers) menunjukkan adanya outliers atau data yang jauh dari nilai-nilai lainnya.</p></li>
+          </ol>
+
+          <img src="/img/boxplot2.png" />
+          <h4>Cara Membaca Boxplot</h4>
+          <ul>
+            <li><p>Median: Garis di dalam kotak menunjukkan nilai tengah dari data.</p></li>
+            <li><p>Kuartil (Q1 dan Q3): Kotak mewakili 50% tengah dari data, dengan kuartil pertama (Q1) sebagai batas bawah kotak dan kuartil ketiga (Q3) sebagai batas atas.</p></li>
+            <li><p>Whiskers: Menyediakan informasi tentang sebaran data di luar kuartil. Mereka dapat menunjukkan rentang data atau batas untuk data non-outliers.</p></li>
+            <li><p>Outliers: Titik-titik yang berada di luar whiskers, menandakan data yang signifikan secara ekstrem dari distribusi.</p></li>
+            <li><p>Simetri: Jika median (garis di dalam kotak) berada di tengah kotak, dan jarak antara Q1 dan median serta Q3 dan median sekitar sama, grafik menunjukkan simetri.</p></li>
+            <li>
+              <p>
+                Cenderung Miring ke Kanan (Skewness ke Kanan): Jika median lebih dekat ke Q1 daripada ke Q3 (median lebih dekat ke "atas" kotak), dan rentang data di sebelah kanan (di atas kotak) lebih panjang daripada di kiri (di bawah
+                kotak), grafik cenderung miring ke kanan.
+              </p>
+            </li>
+            <li>
+              <p>
+                Cenderung Miring ke Kiri (Skewness ke Kiri): Jika median lebih dekat ke Q3 daripada ke Q1 (median lebih dekat ke "bawah" kotak), dan rentang data di sebelah kiri (di bawah kotak) lebih panjang daripada di kanan (di atas
+                kotak), grafik cenderung miring ke kiri.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="code" style="margin-top: 5px">
+          <p>Boxplot dibuat di R menggunakan Fungsi <span>boxplot()</span></p>
+          <div class="box">
+            <span>Sintaks:</span> <code>boxplot(x,data,notch,varwidth,names,main)</code>
+            <h4>Parameters</h4>
+            <ul>
+              <li><p>x: Parameter ini diatur sebagai vektor atau formula.</p></li>
+              <li><p>data: Parameter ini mengatur kerangka data.</p></li>
+              <li><p>notch: Parameter ini adalah label untuk sumbu horizontal.</p></li>
+              <li><p>varwidth: Parameter ini adalah nilai logis. Diatur sebagai benar untuk menggambar lebar kotak yang proposional terhadap ukuran sampel.</p></li>
+              <li><p>main: Parameter ini adalah judul dari grafik.</p></li>
+              <li><p>names: Parameter ini adalah label kelompok yang akan ditampilkan di bawah setiap boxplot.</p></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Bagian Pertama -->
+        <div class="dataset">
+          <h3>Membuat Dataset</h3>
+          <p>Pada tutorial kali ini kita menggunakan dataset yang disediakan oleh R yaitu "mtcars" dataset.</p>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <pre><code class="language-r">
+data(mtcars)
+head(mtcars)</code></pre>
+          </div>
+          <img class="img" src="/img/dataset.jpeg" />
+        </div>
+
+        <!-- Bagian Kedua -->
+        <div class="dataset">
+          <h3>Membuat Boxplot</h3>
+          <p>Sekarang kita akan membuat boxplot "mpg"</p>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <div class="code-block">
+              <button class="copy-button">Copy</button>
+              <pre><code class="language-r">
+# Membuat boxplot untuk variabel 'mpg' dari dataset mtcars
+boxplot(mtcars$mpg, 
+main = "Boxplot of MPG in mtcars",
+xlab = "Mileage per Gallon")</code></pre>
+            </div>
+          </div>
+          <img class="img" src="/img/boxplot.jpg" />
+          <h3>Interpretasi</h3>
+          <p>
+            Dari grafik boxplot di atas, terlihat bahwa garis tengah dalam kotak (box) mewakili nilai median dari distribusi data. Perlu diperhatikan bahwa jarak antara kuartil pertama (Q1) dan median, serta jarak antara median dan kuartil
+            ketiga (Q3), tidak terlalu jauh. Hal ini menunjukkan adanya distribusi data yang cenderung simetris.
+          </p>
+          <p>
+            Dalam konteks ini, "simetris" mengacu pada distribusi data di mana nilai median (garis tengah kotak) berada di tengah-tengah atau hampir di tengah antara kuartil pertama dan kuartil ketiga. Ketika jarak antara Q1, median, dan Q3
+            relatif serupa, dapat diinterpretasikan bahwa sebagian besar data terletak di sekitar nilai-nilai ini, dan tidak ada kecenderungan yang kuat untuk distribusi data yang sangat condong ke satu sisi (misalnya, distribusi yang
+            sangat miring ke kanan atau kiri).
+          </p>
+        </div>
+
+        <!-- Bagian Ketiga -->
+        <div class="dataset">
+          <h3>Membuat Boxplot antara Variabel "disp" dan "gear"</h3>
+          <p>Sekarang kita akan menggambarkan graph relasi antara "disp" dan "gear"</p>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <pre><code class="language-r">
+boxplot(disp ~ gear, data = mtcars,
+main = "Displacement by Gear",
+xlab = "Gear",
+ylab = "Displacement")
+          </code></pre>
+          </div>
+          <img class="img" src="/img/boxplot3.jpeg" />
+          <h3>Interpretasi</h3>
+          <p>
+            Pada boxplot di atas, kita memeriksa distribusi variabel disp (displacement) berdasarkan nilai variabel gear. Dalam kategori gear 3, distribusi data cenderung simetris. Di sisi lain, untuk kategori gear 4, data cenderung condong
+            ke kiri (skewed left), menunjukkan kecenderungan adanya nilai-nilai yang lebih rendah. Sedangkan untuk kategori gear 5, distribusi data cenderung condong ke kanan (skewed right), menunjukkan kecenderungan adanya nilai-nilai yang
+            lebih tinggi.
+          </p>
+        </div>
+
+        <div class="dataset">
+          <h3>Membuat Boxplot Horizontal antara Variabel "disp" dan "gear"</h3>
+          <p>Sekarang kita akan menggambarkan graph relasi antara "disp" dan "gear"</p>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <pre><code class="language-r">
+boxplot(disp ~ gear, data = mtcars,
+main = "Displacement by Gear",
+ylab = "Gear",
+xlab = "Displacement",
+horizontal = TRUE)</code></pre>
+          </div>
+          <img src="/img/boxplot4.jpeg" />
+          <h3>Interpretasi</h3>
+          <p>
+            Pada boxplot di atas, kita memeriksa distribusi variabel disp (displacement) berdasarkan nilai variabel gear. Dalam kategori gear 3, distribusi data cenderung simetris. Di sisi lain, untuk kategori gear 4, data cenderung condong
+            ke kiri (skewed left), menunjukkan kecenderungan adanya nilai-nilai yang lebih rendah. Sedangkan untuk kategori gear 5, distribusi data cenderung condong ke kanan (skewed right), menunjukkan kecenderungan adanya nilai-nilai yang
+            lebih tinggi.
+          </p>
+        </div>
+
+        <div class="related-post">
+          <h2>Related Post</h2>
+          <ul>
+            <li>
+              <span class="material-symbols-outlined"> library_books </span>
+              <a href="/R-Studio/barplot.html">Membuat Bar-Chart Menggunakan R-Studio</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> library_books </span>
+              <a href="/R-Studio/histogram.html">Membuat Histogram Menggunakan R-Studio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="other-articles">
+        <h3>Artikel Lainnya</h3>
+        <ul>
+          <li><a href="#">Pengantar Matematika Dasar</a></li>
+          <li><a href="#">Mengenal Jenis-jenis Data Statistik</a></li>
+          <li><a href="#">Cara Menghitung Mean, Median, dan Modus</a></li>
+
+          <!-- Anda dapat menambahkan lebih banyak artikel lain di sini -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answerDiv = document.getElementById(answerId);
+        var button = answerDiv.previousElementSibling; // Mendapatkan tombol sebelum elemen jawaban
+        if (answerDiv.style.display === "none") {
+          answerDiv.style.display = "block";
+          button.textContent = "Sembunyikan Jawaban";
+        } else {
+          answerDiv.style.display = "none";
+          button.textContent = "Tampilkan Jawaban";
+        }
+      }
+
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+
+      // bagian copy code
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll(".copy-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const codeBlock = button.nextElementSibling.querySelector("code");
+            const range = document.createRange();
+            range.selectNode(codeBlock);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+
+            try {
+              document.execCommand("copy");
+              button.textContent = "Copied!";
+              setTimeout(() => {
+                button.textContent = "Copy";
+              }, 2000);
+            } catch (err) {
+              console.error("Failed to copy text: ", err);
+            }
+
+            window.getSelection().removeAllRanges();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

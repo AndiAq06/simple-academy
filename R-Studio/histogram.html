@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membuat Histogram Menggunakan R-Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="related-articles">
+        <h3>Artikel Terkait</h3>
+        <ul>
+          <li><a href="#">Memahami Konsep Dasar Statistika</a></li>
+          <li><a href="#">Penerapan Statistika dalam Berbagai Bidang</a></li>
+          <!-- Anda dapat menambahkan lebih banyak artikel terkait di sini -->
+        </ul>
+      </div>
+
+      <div class="container-box">
+        <div class="path">
+          <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
+          <a href="/statistika/parametrik_nonparametrik.html">R-Studio</a>
+        </div>
+        <h2 class="judul">Membuat Histogram Menggunakan R-Studio</h2>
+        <div class="author-info">
+          <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
+          <span class="author-name">Andi Ardiansyah Nasir</span>
+          <span class="post-date">12 Juni 2024</span>
+        </div>
+
+        <div class="img">
+          <img src="/img/histogram1.png" alt="image" />
+        </div>
+
+        <div class="introduction">
+          <h3>Pengertian Histogram</h3>
+          <p>
+            Histogram merupakan grafik batang yang menampilkan frekuensi atau jumlah kemunculan data di setiap interval. Interval tersebut adalah rentang nilai data dibagi ke dalam interval, dan tinggi setiap batang menunjukkan seberapa
+            sering data jatuh dalam interval tersebut.
+          </p>
+          <h3>Kegunaan Histogram</h3>
+          <ul>
+            <li><p>Distribusi Data Memberikan gambaran visual tentang distribusi suatu data. Ini membantu untuk melihat apakah data cenderung berkumpul di interval tertentu atau berdistribusi merata.</p></li>
+            <li><p>Pemahaman Pola Histogram membantu mengidentifikasi pola atau bentuk distribusi data seperti distribusi normal,skewed, atau distribusi lainnya.</p></li>
+            <li><p>Pemilihan Interval Memungkinkan untuk memahami dana menyesuaikan lebar interval agar relevan dengan data yang dihadapi.</p></li>
+          </ul>
+        </div>
+
+        <div class="code" style="margin-top: 5px">
+          <p>Histogram dibuat di R menggunakan Fungsi hist()</p>
+          <div class="box">
+            <span>Sintaks:</span> <code>hist(v,main,xlab,xlim,ylim,breaks,col,border)</code>
+            <h4>Parameters</h4>
+            <ul>
+              <li><p>v:Parameter ini berisi nilai-nilai numerik yang digunakan dalam pembuatan histogram</p></li>
+              <li><p>main: Parameter ini adalah judul dari grafik histogram yang akan dibuat.</p></li>
+              <li><p>col: Parameter ini digunakan untuk menetapkan warna dari batang-batang pada histogram.</p></li>
+              <li><p>xlab: Parameter ini adalah label untuk sumbu horizontal (sumbu x) pada histogram.</p></li>
+              <li><p>border: Parameter ini digunakan untuk menetapkan warna batas dari setiap batang pada histogram.</p></li>
+              <li><p>xlim: Parameter ini adalah label kelompok yang akan ditampilkan di bawah setiap boxplot.</p></li>
+              <li><p>ylim: Parameter ini digunakan untuk menetapkan rentang nilai yang akan ditampilkan pada sumbu y (sumbu vertikal) pada histogram.</p></li>
+              <li><p>breaks: Parameter ini digunakan sebagai lebar setiap batang pada histogram.</p></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Bagian Pertama -->
+        <div class="dataset">
+          <h3>Simple Histogram pada R</h3>
+          <p>Membuat simple histogram menggunkan parameter yang sudah disebutkan diatas.</p>
+          <pre class="tutorial">
+<code>
+    # Membuat data untuk histogram.
+    v <- c(19, 23, 11, 5, 16, 21, 32, 
+        14, 19, 27, 39, 6, 9, 17, 23, 39)
+
+    # Membuat histogram
+    hist(v, xlab = "Books",
+        col = "orange", border = "black")
+</code>
+            </pre>
+          <img src="/img/histogram2.jpeg" alt="image histogram 2" />
+        </div>
+
+        <!-- Bagian Kedua -->
+        <div class="dataset">
+          <h3>Membuat Range untuk Nilai X dan Y</h3>
+          <p>Untuk mendeskripsikan nilai range kita dapat melakukan langkah berikut:</p>
+          <ol>
+            <li>Kita dapat menggunakan parameter xlim dan ylim pada X-axis dan Y-axis.</li>
+            <li>Kita juga dapat menambahkan parameter breaks untuk mengatur lebar setiap batang pada histogram.</li>
+          </ol>
+          <p>Lihat contoh dibawah ini</p>
+          <pre class="tutorial">
+<code>
+    # Membuat data untuk histogram.
+    v <- c(19, 23, 11, 45, 30, 49, 5, 16, 21, 32, 
+        14, 19, 27, 39, 6, 9, 17, 23, 39, 40)
+
+    # Membuat histogram
+    hist(v, xlab = "Books", col = "green", border = "black", xlim = c(0, 50),
+        ylim = c(0, 5), breaks = 5)
+</code>
+            </pre>
+          <img src="/img/histogram3.jpeg" alt="image histogram 3" />
+        </div>
+
+        <!-- Bagian Ketiga -->
+        <div class="dataset">
+          <h3>Membuat Histogram Mengembalikan Nilai untuk Labels</h3>
+          <p>Untuk membuat histogram mengembalikan nilai dapat mengunakan fungsi <span>text()</span></p>
+          <pre class="tutorial">
+<code>
+    # Membuat data untuk histogram.
+    v <-  c(19, 23, 11, 5, 16, 21, 32, 
+        14, 19, 27, 39, 6, 9, 17, 23, 39)
+
+    # Membuat histogram.
+    m<-hist(v, xlab = "Berat", ylab ="Frequency",
+            col = "darkmagenta", border = "pink", 
+            breaks = 5)
+
+    # Setting labels
+    text(m$mids, m$counts, labels = m$counts, 
+        adj = c(0.5, -0.5))
+
+</code>
+            </pre>
+          <img src="/img/histogram4.jpeg" alt="image histogram 4" />
+          <p>
+            Dalam kode diatas "m$mids" mengacu pada nilai tengah dari tiap interval (kelas) pada histogram yang dihasilkan dan digunkan untuk mengatur posisi horizontal pada label. Sedangkan "m$counts" mengacu pada jumlah frekuensi data di
+            setiap interval yang dihasilkan oleh fungsi "hist()" dan digunakan untuk mengatur posisi label secara vertikal{" "}
+          </p>
+        </div>
+        <!-- Bagian Keempat -->
+        <div class="dataset">
+          <h3>Membuat Histogram dengan Lebar Berbeda</h3>
+          <p>Membuat grafik histogram lebar berbeda, dengan menggunakan parameter di atas, kami membuat histogram menggunakan lebar tidak seragam.</p>
+          <pre class="tutorial">
+<code>
+    # Membuat data untuk histogram.
+    v <- c(19, 23, 11, 5, 16, 21, 32, 14,
+        19, 27, 39, 120, 40, 70, 90)
+        
+    # Membuat Histogram
+    hist(v, xlab = "Weight", ylab ="Frequency",
+        xlim = c(50, 100),
+        col = "darkmagenta", border = "pink",
+        breaks = c(5, 55, 60, 70, 75,
+                80, 100, 140))
+</code>
+            </pre>
+          <img src="/img/histogram5.jpeg" alt="image histogram 5" />
+        </div>
+
+        <div class="related-post">
+          <h2>Related Post</h2>
+          <ul>
+            <li>
+              <span class="material-symbols-outlined"> library_books </span>
+              <a href="/R-Studio/barplot.html">Membuat Bar-Chart Menggunakan R-Studio</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> library_books </span>
+              <a href="/R-Studio/boxplot.html">Membuat Boxplot Menggunakan R-Studio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="other-articles">
+        <h3>Artikel Lainnya</h3>
+        <ul>
+          <li><a href="#">Pengantar Matematika Dasar</a></li>
+          <li><a href="#">Mengenal Jenis-jenis Data Statistik</a></li>
+          <li><a href="#">Cara Menghitung Mean, Median, dan Modus</a></li>
+
+          <!-- Anda dapat menambahkan lebih banyak artikel lain di sini -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answerDiv = document.getElementById(answerId);
+        var button = answerDiv.previousElementSibling; // Mendapatkan tombol sebelum elemen jawaban
+        if (answerDiv.style.display === "none") {
+          answerDiv.style.display = "block";
+          button.textContent = "Sembunyikan Jawaban";
+        } else {
+          answerDiv.style.display = "none";
+          button.textContent = "Tampilkan Jawaban";
+        }
+      }
+
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

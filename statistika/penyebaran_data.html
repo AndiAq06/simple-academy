@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ukuran Penyebaran Data</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="related-articles">
+        <h3>Artikel Terkait</h3>
+        <ul>
+          <li><a href="#">Memahami Konsep Dasar Statistika</a></li>
+          <li><a href="#">Penerapan Statistika dalam Berbagai Bidang</a></li>
+          <!-- Anda dapat menambahkan lebih banyak artikel terkait di sini -->
+        </ul>
+      </div>
+
+      <div class="container-box">
+        <div class="path">
+          <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
+          <a href="/statistika/parametrik_nonparametrik.html">Ukuran Penyebaran Data</a>
+        </div>
+        <h2 class="judul">Ukuran Penyebaran: Panduan Lengkap</h2>
+        <div class="author-info">
+          <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
+          <span class="author-name">Andi Ardiansyah Nasir</span>
+          <span class="post-date">13 Juni 2024</span>
+        </div>
+
+        <p>
+          Ukuran penyebaran data adalah indikator statistik yang digunakan untuk menggambarkan seberapa tersebar atau variatif nilai-nilai dalam suatu set data. Ukuran ini membantu kita memahami distribusi data, yaitu seberapa jauh
+          nilai-nilai data bervariasi dari nilai rata-rata atau pusatnya. Ukuran penyebaran sangat penting dalam analisis statistik karena memberikan informasi lebih lanjut selain hanya nilai tengah atau rata-rata.
+        </p>
+
+        <div class="img">
+          <img src="https://plus.unsplash.com/premium_photo-1661431121792-81fa2b971d0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image" />
+        </div>
+
+        <h3>Jenis-jenis Ukuran Penyebaran</h3>
+        <ol>
+          <li>Range (Rentang)</li>
+          <li>Interquartile Range (Rentang Interkuartil)</li>
+          <li>Variance (Varians)</li>
+          <li>Standard Deviation (Simpangan Baku)</li>
+          <li>Mean Absolute Deviation (Deviasi Mutlak Rata-rata)</li>
+          <li>Coefficient of Variation (Koefisien Variasi)</li>
+        </ol>
+
+        <h3>1. Range (Rentang)</h3>
+        <p><strong>Definisi:</strong> Rentang adalah selisih antara nilai maksimum dan nilai minimum dalam satu set data.</p>
+        <p><strong>Formula:</strong></p>
+        <p>\[ \text{Range} = \text{Nilai Maksimum} - \text{Nilai Minimum} \]</p>
+        <p><strong>Kelebihan:</strong></p>
+        <ul>
+          <li>Mudah dihitung dan dipahami.</li>
+          <li>Memberikan gambaran awal tentang variasi data.</li>
+        </ul>
+        <p><strong>Kekurangan:</strong></p>
+        <ul>
+          <li>Sangat sensitif terhadap nilai ekstrim atau outlier.</li>
+          <li>Tidak memberikan informasi tentang distribusi data di antara nilai minimum dan maksimum.</li>
+        </ul>
+
+        <h3>2. Interquartile Range (Rentang Interkuartil)</h3>
+        <p><strong>Definisi:</strong> Rentang interkuartil adalah selisih antara kuartil ketiga (Q3) dan kuartil pertama (Q1), yang menggambarkan rentang data tengah 50%.</p>
+        <p><strong>Formula:</strong></p>
+        <p>\[ \text{IQR} = Q3 - Q1 \]</p>
+        <p><strong>Kelebihan:</strong></p>
+        <ul>
+          <li>Tidak terpengaruh oleh outlier.</li>
+          <li>Memberikan gambaran yang lebih akurat tentang penyebaran data di tengah distribusi.</li>
+        </ul>
+        <p><strong>Kekurangan:</strong></p>
+        <ul>
+          <li>Tidak mempertimbangkan semua data dalam set.</li>
+        </ul>
+
+        <h3>3. Variance (Varians)</h3>
+        <p><strong>Definisi:</strong> Varians adalah rata-rata dari kuadrat deviasi setiap nilai data dari nilai rata-rata.</p>
+        <p><strong>Formula:</strong></p>
+        <p>Untuk populasi:</p>
+        <p>\[ \text{Varians Populasi} (\sigma^2) = \frac{\sum (x_i - \mu)^2}{N} \]</p>
+        <p>Untuk sampel:</p>
+        <p>\[ \text{Varians Sampel} (s^2) = \frac{\sum (x_i - \bar{x})^2}{n-1} \]</p>
+        <p><strong>Kelebihan:</strong></p>
+        <ul>
+          <li>Menggunakan semua data dalam set.</li>
+          <li>Memberikan gambaran yang jelas tentang penyebaran data.</li>
+        </ul>
+        <p><strong>Kekurangan:</strong></p>
+        <ul>
+          <li>Menghasilkan nilai dalam satuan kuadrat yang sulit diinterpretasikan.</li>
+        </ul>
+        <h3>4. Standard Deviation (Simpangan Baku)</h3>
+        <p><strong>Definisi:</strong> Simpangan baku adalah akar kuadrat dari varians dan mengukur seberapa jauh nilai-nilai data tersebar dari rata-rata.</p>
+        <p><strong>Formula:</strong></p>
+        <p>Untuk populasi:</p>
+        <p>\[ \text{Simpangan Baku Populasi} (\sigma) = \sqrt{\frac{\sum (x_i - \mu)^2}{N}} \]</p>
+        <p>Untuk sampel:</p>
+        <p>\[ \text{Simpangan Baku Sampel} (s) = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n-1}} \]</p>
+        <p><strong>Kelebihan:</strong></p>
+        <ul>
+          <li>Menggunakan semua data dalam set.</li>
+          <li>Nilainya lebih mudah diinterpretasikan karena dalam satuan yang sama dengan data asli.</li>
+        </ul>
+        <p><strong>Kekurangan:</strong></p>
+        <ul>
+          <li>Sensitif terhadap outlier.</li>
+        </ul>
+
+        <h3>5. Mean Absolute Deviation (Deviasi Mutlak Rata-rata)</h3>
+        <p><strong>Definisi:</strong> Deviasi mutlak rata-rata adalah rata-rata dari nilai absolut deviasi setiap nilai data dari nilai rata-rata.</p>
+        <p><strong>Formula:</strong></p>
+        <p>\[ \text{MAD} = \frac{\sum |x_i - \bar{x}|}{n} \]</p>
+        <p><strong>Kelebihan:</strong></p>
+        <ul>
+          <li>Tidak terlalu terpengaruh oleh outlier.</li>
+          <li>Lebih mudah dipahami dibandingkan varians.</li>
+        </ul>
+        <p><strong>Kekurangan:</strong></p>
+        <ul>
+          <li>Kurang populer dibandingkan simpangan baku dan varians.</li>
+        </ul>
+
+        <h3>6. Coefficient of Variation (Koefisien Variasi)</h3>
+        <p><strong>Definisi:</strong> Koefisien variasi adalah rasio antara simpangan baku dengan rata-rata dan dinyatakan dalam persentase.</p>
+        <p><strong>Formula:</strong></p>
+        <p>\[ \text{CV} = \left( \frac{\sigma}{\mu} \right) \times 100\% \]</p>
+        <p><strong>Kelebihan:</strong></p>
+        <ul>
+          <li>Mengukur penyebaran relatif dibandingkan dengan rata-rata.</li>
+          <li>Memungkinkan perbandingan antara set data yang berbeda.</li>
+        </ul>
+        <p><strong>Kekurangan:</strong></p>
+        <ul>
+          <li>Tidak cocok digunakan jika rata-rata mendekati nol.</li>
+        </ul>
+        <h2>Tabel Perbandingan</h2>
+        <table border="1">
+          <tr>
+            <th>Ukuran Penyebaran</th>
+            <th>Definisi</th>
+            <th>Formula</th>
+            <th>Kelebihan</th>
+            <th>Kekurangan</th>
+          </tr>
+          <tr>
+            <td>Range</td>
+            <td>Selisih antara nilai maksimum dan minimum</td>
+            <td>\( \text{Range} = \text{Max} - \text{Min} \)</td>
+            <td>Mudah dihitung</td>
+            <td>Sensitif terhadap outlier</td>
+          </tr>
+          <tr>
+            <td>IQR</td>
+            <td>Selisih antara kuartil ketiga dan pertama</td>
+            <td>\( \text{IQR} = Q3 - Q1 \)</td>
+            <td>Tidak terpengaruh outlier</td>
+            <td>Tidak mempertimbangkan semua data</td>
+          </tr>
+          <tr>
+            <td>Varians</td>
+            <td>Rata-rata kuadrat deviasi dari rata-rata</td>
+            <td>\( \sigma^2 = \frac{\sum (x_i - \mu)^2}{N} \)</td>
+            <td>Menggunakan semua data</td>
+            <td>Sulit diinterpretasikan</td>
+          </tr>
+          <tr>
+            <td>Simpangan Baku</td>
+            <td>Akar kuadrat dari varians</td>
+            <td>\( \sigma = \sqrt{\frac{\sum (x_i - \mu)^2}{N}} \)</td>
+            <td>Mudah diinterpretasikan</td>
+            <td>Sensitif terhadap outlier</td>
+          </tr>
+          <tr>
+            <td>MAD</td>
+            <td>Rata-rata dari deviasi absolut dari rata-rata</td>
+            <td>\( \text{MAD} = \frac{\sum |x_i - \bar{x}|}{n} \)</td>
+            <td>Tidak terlalu terpengaruh outlier</td>
+            <td>Kurang populer</td>
+          </tr>
+          <tr>
+            <td>CV</td>
+            <td>Rasio antara simpangan baku dan rata-rata dalam persentase</td>
+            <td>\( \text{CV} = \left( \frac{\sigma}{\mu} \right) \times 100\% \)</td>
+            <td>Mengukur penyebaran relatif</td>
+            <td>Tidak cocok jika rata-rata mendekati nol</td>
+          </tr>
+        </table>
+
+        <h2>Kesimpulan</h2>
+        <p>
+          Pemahaman tentang ukuran penyebaran data sangat penting dalam analisis statistik karena memberikan wawasan mendalam tentang karakteristik distribusi data. Memilih ukuran penyebaran yang tepat bergantung pada konteks data dan
+          tujuan analisis. Dengan demikian, peneliti dan analis dapat membuat kesimpulan yang lebih akurat dan informatif dari data yang mereka pelajari.
+        </p>
+      </div>
+
+      <div class="other-articles">
+        <h3>Artikel Lainnya</h3>
+        <ul>
+          <li><a href="#">Pengantar Matematika Dasar</a></li>
+          <li><a href="#">Mengenal Jenis-jenis Data Statistik</a></li>
+          <li><a href="#">Cara Menghitung Mean, Median, dan Modus</a></li>
+
+          <!-- Anda dapat menambahkan lebih banyak artikel lain di sini -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answerDiv = document.getElementById(answerId);
+        var button = answerDiv.previousElementSibling; // Mendapatkan tombol sebelum elemen jawaban
+        if (answerDiv.style.display === "none") {
+          answerDiv.style.display = "block";
+          button.textContent = "Sembunyikan Jawaban";
+        } else {
+          answerDiv.style.display = "none";
+          button.textContent = "Tampilkan Jawaban";
+        }
+      }
+
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

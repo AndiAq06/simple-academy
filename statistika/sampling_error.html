@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sampling Error</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="related-articles">
+        <h3>Artikel Terkait</h3>
+        <ul>
+          <li><a href="#">Memahami Konsep Dasar Statistika</a></li>
+          <li><a href="#">Penerapan Statistika dalam Berbagai Bidang</a></li>
+          <!-- Anda dapat menambahkan lebih banyak artikel terkait di sini -->
+        </ul>
+      </div>
+
+      <div class="container-box">
+        <div class="path">
+          <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
+          <a href="/statistika/parametrik_nonparametrik.html">Sampling Error</a>
+        </div>
+        <h2 class="judul">Mengupas Tuntas Kesalahan Sampling Error: Masalah yang Perlu Diwaspadai dalam Penelitian</h2>
+        <div class="author-info">
+          <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
+          <span class="author-name">Andi Ardiansyah Nasir</span>
+          <span class="post-date">13 Mei 2024</span>
+        </div>
+
+        <p>
+          Kesalahan pengambilan sampel adalah kesalahan statistik yang terjadi karena tidak memilih sampel yang mewakili seluruh populasi data. Akibatnya, hasil yang ditemukan dalam sampel tidak mewakili keseluruhan populasi. Sampling
+          merupakan analisis yang dilakukan dengan memilih sejumlah observasi dari populasi yang lebih besar. Metode pemilihan tersebut dapat menghasilkan baik kesalahan sampling maupun kesalahan
+          <a href="#">non-sampling error </a>.
+        </p>
+
+        <div class="img">
+          <img src="/img/sampling_error.png" alt="sampling_error" />
+        </div>
+
+        <p>
+          Gambar diatas memberikan ilustrasi visual tentang konsep sampling error yang terjadi saat mengambil sampel dari suatu populasi. Lingkaran besar berwarna biru mewakili keseluruhan populasi yang terdiri dari banyak individu dengan
+          karakteristik yang beragam, digambarkan dengan ikon manusia berwarna-warni. Dari populasi tersebut, diambil sebuah sampel yang direpresentasikan oleh lingkaran biru yang lebih kecil, terdiri dari beberapa individu yang dipilih
+          secara acak atau mungkin dipengaruhi oleh bias tertentu.
+        </p>
+
+        <p style="margin-top: 10px">
+          Proses pemilihan sampel ini dilambangkan dengan garis putus-putus yang menghubungkan populasi dan sampel. Dalam sampel yang dipilih, terlihat bahwa komposisi individu tidak sepenuhnya mencerminkan komposisi individu dalam populasi
+          sebenarnya. Misalnya, individu dengan ikon berwarna biru dan hitam lebih banyak dalam sampel dibandingkan dalam populasi. Perbedaan ini antara komposisi sampel dan populasi sebenarnya inilah yang disebut dengan sampling error.
+          Ketidaksesuaian tersebut dapat terjadi karena sampel yang dipilih mungkin tidak cukup representatif atau mengalami bias tertentu, seperti yang digambarkan dengan panah ke arah "Sampling error occurs".
+        </p>
+
+        <h3>Jenis Kesalahan Sampling Error</h3>
+        <p>Ada berbagai kategori kesalahan sampling error, seperti:</p>
+        <h4>1. Kesalahan Definisi Populasi</h4>
+        <p>
+          Kesalahan ini terjadi ketika seorang peneliti tidak memahami secara tepat siapa yang seharusnya menjadi subjek survei. Misalnya, survei yang ditujukan pada kelompok tertentu, namun tidak memperhitungkan variasi penting dari
+          populasi yang sebenarnya.
+        </p>
+        <h4>2. Kesalahan Pemilihan Sampel</h4>
+        <p>
+          Kesalahan ini muncul saat survei dilakukan secara sukarela atau hanya diikuti oleh peserta yang tertarik dalam survei tersebut. Hal ini dapat memengaruhi representasi data karena mungkin hanya memperoleh respons dari kelompok
+          tertentu yang memiliki minat khusus terhadap topik survei. Upaya diperlukan agar partisipasi merata dari berbagai kelompok.
+        </p>
+        <h4>3. Kesalahan Kerangka Sampel</h4>
+        <p>Kesalahan ini terjadi ketika sampel diambil dari data populasi yang salah atau tidak sesuai. Contohnya, mengambil sampel dari wilayah yang berbeda dengan populasi yang ingin disurvei.</p>
+        <h4>4. Kesalahan Non-Respons</h4>
+        <p>
+          Kesalahan ini berlangsung ketika tanggapan yang penting tidak diperoleh dari survei karena kendala dalam menghubungi responden potensial atau karena mereka menolak untuk berpartisipasi. Kesalahan ini dapat menghasilkan bias dalam
+          analisis karena data yang diperoleh mungkin tidak mewakili seluruh populasi yang ingin disurvei.
+        </p>
+        <h3>Mengurangi Kesalahan Sampling Error</h3>
+        <p>
+          Kesalahan sampling error dapat dikurangi dengan meningkatkan ukuran sampel. Ketika ukuran sampel bertambah, sampel semakin mendekati populasi sebenarnya, sehingga mengurangi potensi penyimpangan dari populasi sebenarnya. Para
+          peneliti mungkin berusaha mengurangi kesalahan sampling dengan melakukan replikasi studi mereka. Ini dapat dilakukan dengan mengambil pengukuran yang sama secara berulang, menggunakan lebih dari satu subjek atau kelompok, atau
+          dengan melakukan beberapa studi.
+        </p>
+        <p>
+          Pemilihan acak juga merupakan cara tambahan untuk meminimalkan terjadinya kesalahan sampling. Pemilihan acak menetapkan pendekatan sistematis dalam pemilihan sampel. Sebagai contoh, daripada memilih peserta untuk diwawancarai
+          secara sembarangan, seorang peneliti mungkin memilih mereka yang namanya muncul pertama, kesepuluh, kedua puluh, ketiga puluh, keempat puluh, dan seterusnya dalam daftar.
+        </p>
+      </div>
+
+      <div class="other-articles">
+        <h3>Artikel Lainnya</h3>
+        <ul>
+          <li><a href="#">Pengantar Matematika Dasar</a></li>
+          <li><a href="#">Mengenal Jenis-jenis Data Statistik</a></li>
+          <li><a href="#">Cara Menghitung Mean, Median, dan Modus</a></li>
+
+          <!-- Anda dapat menambahkan lebih banyak artikel lain di sini -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answerDiv = document.getElementById(answerId);
+        var button = answerDiv.previousElementSibling; // Mendapatkan tombol sebelum elemen jawaban
+        if (answerDiv.style.display === "none") {
+          answerDiv.style.display = "block";
+          button.textContent = "Sembunyikan Jawaban";
+        } else {
+          answerDiv.style.display = "none";
+          button.textContent = "Tampilkan Jawaban";
+        }
+      }
+
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

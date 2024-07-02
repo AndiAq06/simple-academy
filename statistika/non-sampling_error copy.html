@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non-Sampling Error</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="related-articles">
+        <h3>Artikel Terkait</h3>
+        <ul>
+          <li><a href="#">Memahami Konsep Dasar Statistika</a></li>
+          <li><a href="#">Penerapan Statistika dalam Berbagai Bidang</a></li>
+          <!-- Anda dapat menambahkan lebih banyak artikel terkait di sini -->
+        </ul>
+      </div>
+
+      <div class="container-box">
+        <div class="path">
+          <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
+          <a href="/statistika/parametrik_nonparametrik.html">Non-Sampling Error</a>
+        </div>
+        <h2 class="judul">Memahami Non-Sampling Error dalam Survei dan Sensus</h2>
+        <div class="author-info">
+          <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
+          <span class="author-name">Andi Ardiansyah Nasir</span>
+          <span class="post-date">13 Mei 2024</span>
+        </div>
+
+        <div class="img">
+          <img src="/img/non-sampling.webp" alt="sampling_error" />
+        </div>
+
+        <p>
+          Non-sampling error mengacu pada semua sumber kesalahan yang tidak terkait dengan pengambilan sampel. Non-sampling error hadir dalam semua jenis survei, termasuk sensus dan data administratif. Kesalahan ini muncul karena beberapa
+          alasan: kerangka (frame) mungkin tidak lengkap, beberapa responden mungkin tidak melaporkan data dengan akurat, data mungkin hilang untuk beberapa responden, dan lain-lain.
+        </p>
+
+        <p class="par">Non-sampling error dapat diklasifikasikan menjadi dua kelompok: kesalahan acak (random errors) dan kesalahan sistematis (systematic errors).</p>
+
+        <p class="par">
+          Kesalahan acak adalah kesalahan yang efeknya saling membatalkan jika digunakan sampel yang cukup besar, sehingga menyebabkan peningkatan variabilitas. Kesalahan sistematis adalah kesalahan yang cenderung mengarah ke satu arah yang
+          sama, dan dengan demikian terakumulasi dalam seluruh sampel, menyebabkan bias dalam hasil akhir. Tidak seperti kesalahan acak, bias ini tidak berkurang dengan meningkatkan ukuran sampel. Kesalahan sistematis merupakan penyebab
+          utama kekhawatiran dalam hal kualitas data survei. Sayangnya, non-sampling error seringkali sangat sulit, bahkan tidak mungkin, untuk diukur.
+        </p>
+
+        <h3>Jenis-jenis Non-Sampling Error:</h3>
+        <h4>1. Kesalahan Cakupan (Coverage Error)</h4>
+        <p>
+          Kesalahan cakupan terdiri dari pengabaian (undercoverage), inklusi yang salah, duplikasi, dan kesalahan klasifikasi (overcoverage) unit dalam kerangka survei. Kesalahan ini sangat penting karena mempengaruhi setiap estimasi yang
+          dihasilkan oleh survei. Dalam kasus sensus, kesalahan cakupan mungkin menjadi sumber utama kesalahan. Kesalahan cakupan dapat memiliki dimensi spasial (terkait wilayah geografis) dan temporal (terkait waktu), serta dapat
+          menyebabkan bias dalam estimasi. Efeknya dapat bervariasi untuk subkelompok populasi yang berbeda. Kesalahan ini cenderung sistematis dan biasanya disebabkan oleh undercoverage (tidak termasuknya unit yang seharusnya tercakup),
+          sehingga penting untuk menguranginya semaksimal mungkin.
+        </p>
+
+        <h4>2. Kesalahan Pengukuran (Measurement Error)</h4>
+        <p>
+          Kesalahan pengukuran, juga disebut kesalahan respons, adalah perbedaan antara nilai terukur dan nilai sebenarnya. Kesalahan ini terdiri dari bias dan varians, dan terjadi ketika data diminta, diberikan, diterima, atau direkam
+          dengan tidak benar. Penyebab kesalahan ini dapat berasal dari:
+        </p>
+
+        <ul>
+          <li>
+            <h4>Desain kuesioner yang buruk:</h4>
+            <p>Pertanyaan dalam survei atau sensus harus dirumuskan dengan hati-hati untuk menghindari bias. Jika pertanyaan menyesatkan atau membingungkan, maka respons mungkin akan terdistorsi.</p>
+          </li>
+          <li>
+            <h4>Bias pewawancara</h4>
+            <p>
+              Pewawancara dapat mempengaruhi bagaimana responden menjawab pertanyaan survei. Hal ini dapat terjadi ketika pewawancara terlalu ramah atau acuh atau memancing responden. Untuk mencegah ini, pewawancara harus dilatih untuk
+              tetap netral selama wawancara. Mereka juga harus memperhatikan dengan seksama cara mereka mengajukan setiap pertanyaan. Jika pewawancara mengubah cara pertanyaan dirumuskan, hal itu dapat mempengaruhi jawaban responden.
+            </p>
+          </li>
+          <li>
+            <h4>Kesalahan responden</h4>
+            <p>
+              Responden juga dapat memberikan jawaban yang tidak benar. Kesalahan ingatan, kecenderungan untuk melebih-lebihkan atau meremehkan peristiwa, dan kecenderungan untuk memberikan jawaban yang tampak lebih dapat diterima secara
+              sosial adalah beberapa alasan mengapa responden mungkin memberikan jawaban yang salah.
+            </p>
+          </li>
+          <li>
+            <h4>Masalah dengan proses survei</h4>
+            <p>
+              Kesalahan juga dapat terjadi karena masalah dengan proses survei itu sendiri. Menggunakan jawaban proxy (dari orang selain responden), atau kurangnya kontrol atas prosedur survei adalah beberapa cara yang meningkatkan risiko
+              kesalahan respons.
+            </p>
+          </li>
+        </ul>
+
+        <h4>3. Kesalahan Non-respons (Non-response Error)</h4>
+        <p>
+          Estimasi yang diperoleh setelah non-respons diamati dan imputasi (penggantian data yang hilang) digunakan untuk menangani non-respons biasanya tidak setara dengan estimasi yang akan diperoleh jika semua nilai yang diinginkan
+          diamati tanpa kesalahan. Perbedaan antara dua jenis estimasi ini disebut kesalahan non-respons. Ada dua jenis kesalahan non-respons:
+        </p>
+        <ul>
+          <li>
+            <h4>Kesalahan non-respons total</h4>
+            <p>
+              Terjadi ketika semua atau hampir semua data untuk unit sampel hilang. Ini dapat terjadi jika responden tidak tersedia atau sementara absen, tidak dapat berpartisipasi atau menolak berpartisipasi dalam survei, atau jika rumah
+              tangga kosong. Jika sejumlah besar unit sampel tidak merespons survei, maka hasilnya mungkin bias karena karakteristik non-responden mungkin berbeda dari mereka yang berpartisipasi.
+            </p>
+          </li>
+          <li>
+            <h4>Kesalahan non-respons parsial</h4>
+            <p>
+              Terjadi ketika responden memberikan informasi yang tidak lengkap. Bagi beberapa orang, beberapa pertanyaan mungkin sulit dipahami, mereka mungkin menolak atau lupa menjawab pertanyaan. Desain kuesioner yang buruk atau teknik
+              wawancara yang buruk juga dapat menjadi alasan yang mengakibatkan kesalahan non-respons parsial. Untuk mengurangi kesalahan ini, perlu diperhatikan dalam merancang dan menguji kuesioner. Pelatihan pewawancara yang memadai dan
+              strategi pengeditan dan imputasi yang tepat juga akan membantu meminimalkan kesalahan ini.
+            </p>
+          </li>
+        </ul>
+
+        <h4>4. Kesalahan Pemrosesan (Processing Error)</h4>
+        <p>
+          Kesalahan pemrosesan terjadi selama pemrosesan data. Ini mencakup semua kegiatan pemrosesan data setelah pengumpulan dan sebelum estimasi, seperti kesalahan dalam penangkapan data, pengodean, pengeditan, dan tabulasi data, serta
+          dalam penugasan bobot survei.
+        </p>
+
+        <ul>
+          <li>
+            <h4>Kesalahan pengodean</h4>
+            <p>
+              Terjadi ketika pengode yang berbeda mengode jawaban yang sama dengan cara yang berbeda, yang dapat disebabkan oleh pelatihan yang buruk, instruksi yang tidak lengkap, variasi dalam kinerja pengode (misalnya kelelahan, sakit),
+              kesalahan entri data, atau kerusakan mesin (beberapa kesalahan pemrosesan disebabkan oleh kesalahan dalam program komputer).
+            </p>
+          </li>
+          <li>
+            <h4>Kesalahan penangkapan data</h4>
+            <p>
+              Terjadi ketika data tidak dimasukkan ke komputer persis seperti yang tertera di kuesioner. Ini dapat disebabkan oleh kompleksitas data alfanumerik dan kurangnya kejelasan dalam jawaban yang diberikan. Tata letak fisik
+              kuesioner itu sendiri atau dokumen pengodean juga dapat menyebabkan kesalahan penangkapan data. Metode penangkapan data, manual atau otomatis (misalnya, menggunakan pemindai optik), juga dapat menyebabkan kesalahan.
+            </p>
+          </li>
+          <li>
+            <h4>Kesalahan pengeditan dan imputasi</h4>
+            <p>
+              Dapat disebabkan oleh kualitas data asli yang buruk atau struktur data yang kompleks. Ketika proses pengeditan dan imputasi diautomatisasi, kesalahan juga dapat terjadi akibat program yang cacat yang tidak diuji dengan baik.
+              Pemilihan metode imputasi yang tidak tepat dapat memperkenalkan bias. Kesalahan juga dapat terjadi dari perubahan data yang salah yang ditemukan dalam kesalahan, atau dengan mengubah data yang benar secara keliru.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="other-articles">
+        <h3>Artikel Lainnya</h3>
+        <ul>
+          <li><a href="#">Pengantar Matematika Dasar</a></li>
+          <li><a href="#">Mengenal Jenis-jenis Data Statistik</a></li>
+          <li><a href="#">Cara Menghitung Mean, Median, dan Modus</a></li>
+
+          <!-- Anda dapat menambahkan lebih banyak artikel lain di sini -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answerDiv = document.getElementById(answerId);
+        var button = answerDiv.previousElementSibling; // Mendapatkan tombol sebelum elemen jawaban
+        if (answerDiv.style.display === "none") {
+          answerDiv.style.display = "block";
+          button.textContent = "Sembunyikan Jawaban";
+        } else {
+          answerDiv.style.display = "none";
+          button.textContent = "Tampilkan Jawaban";
+        }
+      }
+
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistics | Simple Academy</title>
+    <link rel="stylesheet" href="/statistika/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-4">Welcome to our Math and SQL Web Page!</h1>
+        <p class="lead">Explore the world of mathematics and SQL with us.</p>
+      </div>
+    </div>
+
+    <div class="container-materi">
+      <div class="middle">
+        <h1>Materi Matematics</h1>
+        <div class="container-class">
+          <div class="path"><a href="/index.html">Home</a> <span> >> </span> <a href="/matematika/index.html">Matematics</a></div>
+          <div class="class">
+            <h2>Kelas 7</h2>
+            <div class="column">
+              <ul>
+                <li>
+                  <span class="material-symbols-outlined"> library_books </span>
+                  <a href="/matematika/bilangan_bulat.html"> Bilangan Bulat</a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined"> library_books </span>
+                  <a href="/matematika/latihan_soal_bilangan_bulat_pt1.html"> Soal Bilangan Bulat Kelas 7 | part-1 </a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined"> library_books </span>
+                  <a href="/matematika/latihan_soal_bilangan_bulat_pt2.html"> Soal Bilangan Bulat Kelas 7 | part-2</a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined"> library_books </span>
+                  <a href="/matematika/latihan_soal_bilangan_bulat.html"> Latihan Soal Bilangan Bulat</a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined"> library_books </span>
+                  <a href="/matematika/aljabar.html">Materi Aljabar</a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined"> library_books </span>
+                  <a href="/matematika/latihan_soal_aljabar_pt1.html">Soal Aljabar | part-1</a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined"> library_books </span>
+                  <a href="/matematika/latihan_soal_aljabar.html">Latihan Soal Aljabar</a>
+                </li>
+                <!-- <li>
+                  <span class="material-symbols-outlined"> library_books </span>
+                  <a href="#">Perbedaan Statistika Parametrik dan Nonparametrik</a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined"> library_books </span>
+                  <a href="#">Statistik Descriptive Vs Inferensia</a>
+                </li> -->
+                <!-- Tambahkan materi lainnya sesuai kebutuhan -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      const yearElement = document.getElementById("year");
+      const currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
+
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

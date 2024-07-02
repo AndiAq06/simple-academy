@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bias dan Variance dalam Machine Learning</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="related-articles">
+        <h3>Artikel Terkait</h3>
+        <ul>
+          <li><a href="#">Memahami Konsep Dasar Statistika</a></li>
+          <li><a href="#">Penerapan Statistika dalam Berbagai Bidang</a></li>
+          <!-- Anda dapat menambahkan lebih banyak artikel terkait di sini -->
+        </ul>
+      </div>
+
+      <div class="container-box">
+        <div class="path">
+          <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
+          <a href="/statistika/parametrik_nonparametrik.html">Bias dan Variance dalam Machine Learning</a>
+        </div>
+        <h2 class="judul">Memahami Bias dan Variance dalam Machine Learning</h2>
+        <div class="author-info">
+          <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
+          <span class="author-name">Andi Ardiansyah Nasir</span>
+          <span class="post-date">02 Juli 2024</span>
+        </div>
+        <p>
+          Dalam machine learning, konsep bias dan variance adalah dua komponen utama yang mempengaruhi performa model. Memahami dan mengelola bias serta variance adalah kunci untuk membangun model yang dapat menghasilkan prediksi yang
+          akurat dan dapat diandalkan. Artikel ini akan menjelaskan apa itu bias dan variance, bagaimana keduanya mempengaruhi model machine learning, serta strategi untuk mengoptimalkan keseimbangan antara keduanya.
+        </p>
+
+        <h3>Apa itu Bias dalam Machine Learning ?</h3>
+        <p>
+          Bias mengacu pada kesalahan yang dihasilkan oleh asumsi-asumsi yang ada dalam model machine learning. Bias tinggi terjadi ketika model terlalu sederhana dan tidak mampu menangkap kompleksitas dari data. Ini sering disebut sebagai
+          underfitting. Model yang mengalami underfitting biasanya memiliki performa buruk baik pada data pelatihan maupun data uji.
+        </p>
+        <h4>Contoh Bias Tinggi</h4>
+        <p>
+          Misalkan kita memiliki data yang menunjukkan hubungan non-linear antara dua variabel, tetapi kita menggunakan model linear (misalnya regresi linear sederhana). Model ini akan gagal menangkap pola non-linear yang ada dalam data,
+          sehingga menghasilkan prediksi yang buruk.
+        </p>
+
+        <h3>Apa itu Variance dalam Machine Learning ?</h3>
+        <p>
+          Variance mengacu pada sensitivitas model terhadap fluktuasi dalam data pelatihan. Variance tinggi terjadi ketika model terlalu kompleks dan menangkap noise dari data pelatihan, yang mengakibatkan performa buruk pada data uji. Ini
+          sering disebut sebagai overfitting. Model yang mengalami overfitting biasanya menunjukkan performa sangat baik pada data pelatihan namun buruk pada data uji.
+        </p>
+        <h4>Contoh Varianve Tinggi</h4>
+        <p>
+          Jika kita menggunakan model yang sangat kompleks (misalnya, pohon keputusan dengan kedalaman yang sangat tinggi) untuk data yang sebenarnya sederhana, model ini akan terlalu menyesuaikan diri dengan data pelatihan, termasuk noise
+          atau anomali, sehingga gagal dalam generalisasi ke data baru.
+        </p>
+
+        <h3>Trade-off antara Bias dan Variance</h3>
+        <p>
+          Dalam machine learning, ada trade-off antara bias dan variance. Meningkatkan kompleksitas model akan mengurangi bias tetapi meningkatkan variance, dan sebaliknya. Tujuan utama adalah menemukan keseimbangan yang tepat di antara
+          keduanya untuk meminimalkan total error (kesalahan total).
+        </p>
+
+        <ul>
+          <li>
+            <p><strong>Bias tinggi dan variance rendah:</strong> Model sederhana yang cenderung underfitting.</p>
+          </li>
+          <li>
+            <p><strong>Bias rendah dan variance tinggi:</strong> Model kompleks yang cenderung overfitting.</p>
+          </li>
+          <li>
+            <p><strong>Bias dan variance seimbang:</strong> Model yang mampu generalisasi dengan baik ke data baru.</p>
+          </li>
+        </ul>
+
+        <div class="img">
+          <img src="/img/bias_variance.png" alt="image" />
+        </div>
+
+        <h3>Teknik Mengelola Bias dan Variance</h3>
+
+        <h4>1. Cross-Validation</h4>
+        <p>Menggunakan teknik cross-validation seperti k-fold cross-validation dapat membantu mengevaluasi performa model dengan lebih baik dan mencegah overfitting.</p>
+
+        <h4>2. Regularisasi</h4>
+        <p>Regularisasi (misalnya L1, L2) menambahkan penalti terhadap kompleksitas model, yang dapat membantu mengurangi variance tanpa meningkatkan bias secara signifikan.</p>
+
+        <h4>3. Ensemble Methods</h4>
+        <p>Metode ensemble seperti bagging (misalnya Random Forest) dan boosting (misalnya AdaBoost) mengkombinasikan beberapa model untuk mengurangi variance tanpa menambah bias secara signifikan.</p>
+
+        <h3>Kesimpulan</h3>
+        <p>
+          Memahami dan mengelola bias serta variance adalah kunci dalam pengembangan model machine learning yang efektif. Dengan menggunakan teknik yang tepat untuk menyeimbangkan keduanya, kita dapat membangun model yang memiliki performa
+          baik dan mampu melakukan generalisasi dengan baik terhadap data baru. Dengan demikian, model tidak hanya akan bekerja dengan baik pada data pelatihan tetapi juga pada data yang belum pernah dilihat sebelumnya.
+        </p>
+      </div>
+
+      <div class="other-articles">
+        <h3>Artikel Lainnya</h3>
+        <ul>
+          <li><a href="#">Pengantar Matematika Dasar</a></li>
+          <li><a href="#">Mengenal Jenis-jenis Data Statistik</a></li>
+          <li><a href="#">Cara Menghitung Mean, Median, dan Modus</a></li>
+
+          <!-- Anda dapat menambahkan lebih banyak artikel lain di sini -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answerDiv = document.getElementById(answerId);
+        var button = answerDiv.previousElementSibling; // Mendapatkan tombol sebelum elemen jawaban
+        if (answerDiv.style.display === "none") {
+          answerDiv.style.display = "block";
+          button.textContent = "Sembunyikan Jawaban";
+        } else {
+          answerDiv.style.display = "none";
+          button.textContent = "Tampilkan Jawaban";
+        }
+      }
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+
+      // bagian copy code
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll(".copy-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const codeBlock = button.nextElementSibling.querySelector("code");
+            const range = document.createRange();
+            range.selectNode(codeBlock);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+
+            try {
+              document.execCommand("copy");
+              button.textContent = "Copied!";
+              setTimeout(() => {
+                button.textContent = "Copy";
+              }, 2000);
+            } catch (err) {
+              console.error("Failed to copy text: ", err);
+            }
+
+            window.getSelection().removeAllRanges();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

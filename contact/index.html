@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathematics and SQL</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container-contact">
+      <div class="contact-image">
+        <img src="contact.jpg" alt="Contact Kami" class="contact-foto" />
+      </div>
+      <div class="contact-text">
+        <h1>Contact Us</h1>
+        <p>Anda dapat menghubungi kami melalui media sosial berikut:</p>
+        <ul>
+          <li>
+            <a href="https://github.com/AndiAq06"><img src="github.png" alt="Github" class="contact-icon" /></a>
+          </li>
+          <li>
+            <a href="https://wa.me/6281524190409"><img src="wa.jpeg" alt="Whatsapp" class="contact-icon" /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/andiaso06/"><img src="ig.jpeg" alt="Instagram" class="contact-icon" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      const yearElement = document.getElementById("year");
+      const currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
+
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

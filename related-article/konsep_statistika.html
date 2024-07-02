@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konsep Dasar Statistika</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="related-articles">
+        <h3>Artikel Terkait</h3>
+        <ul>
+          <li><a href="#">Memahami Konsep Dasar Statistika</a></li>
+          <li><a href="#">Penerapan Statistika dalam Berbagai Bidang</a></li>
+          <!-- Anda dapat menambahkan lebih banyak artikel terkait di sini -->
+        </ul>
+      </div>
+
+      <div class="container-box">
+        <div class="path">
+          <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
+          <a href="/related-article/statistik_deskriptif.html">Memahami Konsep Dasar Statistika</a>
+        </div>
+        <h2 class="judul">Memahami Konsep Dasar Statistika</h2>
+        <div class="author-info">
+          <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
+          <span class="author-name">Simpel Academy</span>
+          <span class="post-date">9 Mei 2024</span>
+        </div>
+
+        <p>
+          Statistika merupakan ilmu yang mempelajari tentang pengumpulan, pengorganisasian, analisis, interpretasi, dan presentasi data. Statistika memiliki peranan penting dalam berbagai bidang, seperti bisnis, ekonomi, ilmu sosial, ilmu
+          alam, dan banyak lagi. Dengan memahami konsep dasar statistika, kita dapat mengambil keputusan yang lebih baik dan tepat berdasarkan data yang tersedia.
+        </p>
+
+        <div class="img">
+          <img src="/img/population.jpg" alt="image" />
+        </div>
+
+        <p>
+          1. Populasi dan Sampel Populasi adalah keseluruhan objek atau individu yang menjadi target penelitian. Sampel adalah bagian dari populasi yang dipilih untuk mewakili populasi tersebut. Pengambilan sampel yang tepat sangat penting
+          untuk memastikan bahwa hasil penelitian dapat digeneralisasi untuk populasi secara keseluruhan.
+        </p>
+
+        <p class="par">
+          2. Data adalah fakta atau angka yang dikumpulkan melalui observasi atau eksperimen. Ada dua jenis data utama, yaitu data kuantitatif dan data kualitatif. Data kuantitatif adalah data numerik, seperti usia, berat badan, atau
+          pendapatan. Sedangkan data kualitatif adalah data deskriptif, seperti jenis kelamin, ras, atau preferensi.
+        </p>
+        <div class="img">
+          <img src="/img/descriptive&inference.jpg" alt="image" />
+        </div>
+        <p>
+          3. <a href="/related-article/statistik_deskriptif.html">Statistik Deskriptif</a> adalah bagian dari statistika yang berkaitan dengan pengumpulan, pengorganisasian, dan penyajian data dalam bentuk yang mudah dipahami. Statistik
+          deskriptif meliputi pengukuran tendensi pusat (mean, median, dan modus), pengukuran penyebaran (rentang, varians, dan standar deviasi), serta penyajian data dalam bentuk tabel, grafik, atau diagram.
+        </p>
+        <p class="par">
+          4. <a href="/related-article/statistik_inferensia.html">Statistik Inferensial</a> adalah bagian dari statistika yang berkaitan dengan penarikan kesimpulan tentang populasi berdasarkan data sampel. Statistik inferensial meliputi
+          estimasi parameter, pengujian hipotesis, analisis varians, dan regresi.
+        </p>
+
+        <p class="par">5. Probabilitas adalah ukuran peluang terjadinya suatu peristiwa. Konsep probabilitas sangat penting dalam statistika karena banyak metode statistika yang didasarkan pada teori probabilita</p>
+
+        <div class="img">
+          <img src="/img/probabiity-distributions.webp" alt="image" />
+        </div>
+
+        <p class="par">6. Distribusi adalah pola penyebaran nilai-nilai data dalam populasi atau sampel. Beberapa distribusi yang penting dalam statistika adalah distribusi normal, distribusi binomial, dan distribusi Poisson.</p>
+      </div>
+
+      <div class="other-articles">
+        <h3>Artikel Lainnya</h3>
+        <ul>
+          <li><a href="#">Pengantar Matematika Dasar</a></li>
+          <li><a href="#">Mengenal Jenis-jenis Data Statistik</a></li>
+          <li><a href="#">Cara Menghitung Mean, Median, dan Modus</a></li>
+
+          <!-- Anda dapat menambahkan lebih banyak artikel lain di sini -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answerDiv = document.getElementById(answerId);
+        var button = answerDiv.previousElementSibling; // Mendapatkan tombol sebelum elemen jawaban
+        if (answerDiv.style.display === "none") {
+          answerDiv.style.display = "block";
+          button.textContent = "Sembunyikan Jawaban";
+        } else {
+          answerDiv.style.display = "none";
+          button.textContent = "Tampilkan Jawaban";
+        }
+      }
+
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

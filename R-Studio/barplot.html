@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membuat Barplot Menggunakan R-Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="related-articles">
+        <h3>Artikel Terkait</h3>
+        <ul>
+          <li><a href="#">Memahami Konsep Dasar Statistika</a></li>
+          <li><a href="#">Penerapan Statistika dalam Berbagai Bidang</a></li>
+          <!-- Anda dapat menambahkan lebih banyak artikel terkait di sini -->
+        </ul>
+      </div>
+
+      <div class="container-box">
+        <div class="path">
+          <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
+          <a href="/statistika/parametrik_nonparametrik.html">R-Studio</a>
+        </div>
+        <h2 class="judul">Membuat Bar-Chart Menggunakan R-Studio</h2>
+        <div class="author-info">
+          <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
+          <span class="author-name">Andi Ardiansyah Nasir</span>
+          <span class="post-date">11 Juni 2024</span>
+        </div>
+
+        <div class="img">
+          <img src="/img/barplot6.png" alt="image" />
+        </div>
+
+        <div class="introduction">
+          <h3>Pengertian Bar-Chart</h3>
+          <p>
+            Barplot atau bar chart adalah jenis grafik yang menggunakan batang-batang vertikal atau horizontal untuk menampilkan data kategoris dan kuantitatif. Setiap batang merepresentasikan kategori data dan panjang batang menunjukkan
+            jumlah atau nilai dari kategori tersebut.
+          </p>
+          <h3>Fungsi Bar-Chart</h3>
+          <ol>
+            <li>
+              <p>Visualisasi Data Kategoris: Merepresentasikan data kategori dan jumlahnya dengan batang-batang.</p>
+            </li>
+            <li><p>Perbandingan Data:Membandingkan kuantitas atau proporsi antara kategori yang berbeda dengan mudah.</p></li>
+            <li><p>Ringkasan Visual: Memberikan gambaran cepat tentang distribusi atau perbandingan antara grup atau kategori.</p></li>
+          </ol>
+        </div>
+
+        <div class="code" style="margin-top: 5px">
+          <p>Bar-Chart dibuat di R menggunakan Fungsi <span>barplot()</span></p>
+          <div class="box">
+            <span>Sintaks:</span> <code>barplot(H, xlab, ylab, main, names.arg, col)</code>
+            <h4>Parameters</h4>
+            <ul>
+              <li>
+                <p><span>H:</span> Parameter ini berisi nilai-nilai numerik yang akan digunakan untuk membuat grafik batang</p>
+              </li>
+              <li>
+                <p><span>xlab:</span> Parameter ini adalah label untuk sumbu x (horizontal) pada grafik batang.</p>
+              </li>
+              <li>
+                <p><span>ylab:</span> Parameter ini adalah label untuk sumbu y (vertikal) pada grafik batang.</p>
+              </li>
+              <li>
+                <p><span>main:</span> Parameter ini adalah judul atau label utama dari grafik batang.</p>
+              </li>
+              <li>
+                <p><span>names.arg:</span> Parameter ini adalah vektor yang berisi nama-nama yang akan muncul di bawah setiap batang dalam grafik batang.</p>
+              </li>
+              <li>
+                <p><span>col:</span> Parameter ini digunakan untuk memberikan warna pada batang-batang dalam grafik.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dataset">
+          <h3>Simple Bar-Chart</h3>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <pre><code class="language-r">
+# Membuat data bar-chart
+A <- c(30, 40, 32, 10, 4)
+
+# Plot bar chart
+barplot(A, xlab = "X-axis", ylab = "Y-axis", main ="Bar-Chart")</code></pre>
+          </div>
+          <img class="img" src="/img/barplot1.jpeg" />
+        </div>
+
+        <div class="dataset">
+          <h3>Bar-Chart Horizontal</h3>
+          <p>Membuat Bar-Chart Horizontal dengan menambahkan horiz = TRUE</p>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <pre><code class="language-r">
+# Contoh data
+data <- c(10, 20, 15, 25, 30)
+# Nama-nama untuk setiap bar
+names <- c("A", "B", "C", "D", "E") 
+
+# Membuat barplot horizontal
+barplot(data, horiz = TRUE, 
+main = "Contoh Barplot Horizontal",
+xlab = "Nilai",
+ylab = "Kategori",
+names.arg = names,
+col = "skyblue")</code></pre>
+          </div>
+          <img class="img" src="/img/barplot2.jpeg" />
+        </div>
+        <div class="dataset">
+          <h3>Bar-Chart | Menambahkan nilai Data pada Bar-Chart</h3>
+          <p>Kita juga dapat menambahkan nilai data pada Bar-Chart seperti dibawah ini</p>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <pre><code class="language-r">
+# Data baru
+A <- c(17, 2, 8, 13, 1, 22)
+B <- c("Jan", "Feb", "Mar", "Apr", "Mei", "Jun")
+
+# Plot grafik batang dengan fitur teks
+barplot(A, names.arg = B, xlab = "Bulan",
+        ylab = "Artikel", col = "steelblue",
+        main = "Numedica - Grafik Artikel",
+        cex.main = 1.5, cex.lab = 1.2, cex.axis = 1.1)
+
+# Tambahkan label data di atas setiap batang
+text(
+x = barplot(A, names.arg = B, col = "green", ylim = c(0, max(A) * 1.2)),
+y = A + 1, labels = A, pos = 3, cex = 1.2, col = "black"
+)</code></pre>
+          </div>
+          <img src="/img/barplot3.jpeg" />
+          <ul>
+            <li>
+              <p>
+                Argumen cex.main, cex.lab, dan cex.axis: Mengontrol ukuran font dari judul grafik, label sumbux-x, dan label sumbu-y, secara berturut-turut. Mereka diatur menjadi 1.5, 1.2, dan 1.1 untuk meningkatkan ukuran font guna
+                memudahkan pembacaan.
+              </p>
+            </li>
+            <li>
+              <p>
+                Fungsi text(): Digunakan untuk menambahkan label data di atas setiap batang. Argumen x menentukan koordinat-x dari label (sama dengan koordinat-x barplot()), argumen y menambahkan nilai 1 terhadap tinggi batang yang sesuai
+                (A + 1) untuk menempatkan label tepat di atas batang.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dataset">
+          <h3>Membuat stacked Bar-Chart</h3>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <pre><code class="language-r">
+# Contoh data
+data <- matrix(c(12, 8, 10, 
+                5, 6, 4), 
+            nrow = 2, byrow = TRUE)
+rownames(data) <- c("Group A", "Group B")
+colnames(data) <- c("Category 1", "Category 2", "Category 3")
+
+# Membuat grouped bar chart
+barplot(data, beside = TRUE, col = c("orange", "brown"), 
+        legend = rownames(data),
+        main = "Grouped Bar Chart",
+        xlab = "Categories", ylab = "Values")</code></pre>
+          </div>
+          <img src="/img/barplot4.jpeg" />
+          <p>
+            Kode tersebut membuat sebuah grafik stacked bar chart menggunakan R. Pertama, terdapat pembentukan data dalam bentuk matriks dengan dua baris yang mewakili dua kelompok ("Group A" dan "Group B") serta tiga kolom yang
+            merepresentasikan tiga kategori ("Category 1", "Category 2", dan "Category 3"). Setelah data terbentuk, fungsi barplot() digunakan untuk membuat grafik stacked bar chart. Dalam grafik tersebut, warna batang ditetapkan menjadi
+            orange dan brown, legenda ditambahkan berdasarkan nama-nama kelompok, dan sumbu x dan y dilabeli dengan "Categories" dan "Values" secara berturut-turut. Grafik ini menyajikan informasi visual tentang nilai-nilai di setiap
+            kategori untuk kedua kelompok, memungkinkan perbandingan antara kategori dalam kelompok tersebut secara langsung.
+          </p>
+        </div>
+
+        <div class="dataset">
+          <h3>Membuat grouped Bar-Chart</h3>
+          <p>Ambil nilai vektor dan jadikan matriks M yang akan dikelompokkan atau ditumpuk. Pembuatan matriks dapat dilakukan dengan cara.</p>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <pre><code class="language-r">
+M <- matrix(c(values...), nrow = no_of_rows, ncol = no_of_column, byrow = TRUE)</code></pre>
+          </div>
+          <p>Untuk menampilkan bar secara eksplisit kita dapat menggunakan parameter di samping.</p>
+          <pre>
+<code>
+    barplot( beside=TRUE)
+</code>
+            </pre>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <pre><code class="language-r">
+# Contoh data
+data <- matrix(c(12, 8, 10, 
+                5, 6, 4), 
+                nrow = 2, byrow = TRUE)
+rownames(data) <- c("Group A", "Group B")
+colnames(data) <- c("Category 1", "Category 2", "Category 3")
+
+# Membuat grouped bar chart
+barplot(data, beside = TRUE, col = c("orange", "brown"), 
+        legend = rownames(data),
+        main = "Grouped Bar Chart",
+        xlab = "Categories", ylab = "Values")</code></pre>
+          </div>
+          <img src="/img/barplot5.jpeg" />
+          <p>
+            Kode ini digunakan untuk membuat grouped bar chart dengan menggunakan R. Pertama, dilakukan pembentukan sebuah matriks data dengan dua baris yang mewakili dua kelompok ("Group A" dan "Group B") serta tiga kolom yang mewakili
+            tiga kategori ("Category 1", "Category 2", dan "Category 3"). Setelah matriks data terbentuk, fungsi barplot() digunakan dengan argumen beside = TRUE untuk membuat grouped bar chart. Dalam grafik tersebut, batang dari setiap
+            kelompok dikelompokkan secara berdampingan untuk setiap kategori, menggunakan warna oranye dan coklat. Legenda ditambahkan berdasarkan nama-nama kelompok, sementara sumbu x dan y dilabeli sebagai "Categories" dan "Values"
+            masing-masing. Grafik ini memungkinkan perbandingan langsung antara kategori dalam setiap kelompok secara visual, membantu untuk melihat perbedaan antara kelompok dan kategori-kategori yang terlibat.
+          </p>
+        </div>
+
+        <div class="related-post">
+          <h2>Related Post</h2>
+          <ul>
+            <li>
+              <span class="material-symbols-outlined"> library_books </span>
+              <a href="/R-Studio/boxplot.html">Membuat Boxplot Menggunakan R-Studio</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> library_books </span>
+              <a href="/R-Studio/histogram.html">Membuat Histogram Menggunakan R-Studio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="other-articles">
+        <h3>Artikel Lainnya</h3>
+        <ul>
+          <li><a href="#">Pengantar Matematika Dasar</a></li>
+          <li><a href="#">Mengenal Jenis-jenis Data Statistik</a></li>
+          <li><a href="#">Cara Menghitung Mean, Median, dan Modus</a></li>
+
+          <!-- Anda dapat menambahkan lebih banyak artikel lain di sini -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answerDiv = document.getElementById(answerId);
+        var button = answerDiv.previousElementSibling; // Mendapatkan tombol sebelum elemen jawaban
+        if (answerDiv.style.display === "none") {
+          answerDiv.style.display = "block";
+          button.textContent = "Sembunyikan Jawaban";
+        } else {
+          answerDiv.style.display = "none";
+          button.textContent = "Tampilkan Jawaban";
+        }
+      }
+
+      // bagian copy code
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll(".copy-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const codeBlock = button.nextElementSibling.querySelector("code");
+            const range = document.createRange();
+            range.selectNode(codeBlock);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+
+            try {
+              document.execCommand("copy");
+              button.textContent = "Copied!";
+              setTimeout(() => {
+                button.textContent = "Copy";
+              }, 2000);
+            } catch (err) {
+              console.error("Failed to copy text: ", err);
+            }
+
+            window.getSelection().removeAllRanges();
+          });
+        });
+      });
+
+      // Hamburger menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>
